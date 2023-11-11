@@ -56,7 +56,12 @@ Medium: 11px
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Rubik:wght@300;400;700;900&display=swap');
 
+:root {
+    --primary-color: #e67e22;
+    --tint-color: #fdf2e9;
+}
 
 * {
     box-sizing: border-box;
@@ -64,7 +69,72 @@ Medium: 11px
     padding: 0;
 }
 
+html {
+    direction: rtl;
+    font-size: 10px;
+}
+
 body {
-    display: flex;
-    font-family: sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+    color: #555;
+}
+
+.section-hero {
+    background-color: var(--tint-color);
+    padding: 9.6rem 0;
+}
+
+.hero {
+    max-width: 120rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9.6rem;
+}
+
+.hero-imagebox img {
+    width: 100%;
+}
+
+.hero-textbox h1 {
+    font-size: 4.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #333;
+    margin-bottom: 3.2rem;
+    letter-spacing: 0.5px;
+    text-align: justify;
+}
+
+.hero-textbox p {
+    font-size: 2rem;
+    line-height: 2.6rem;
+    margin-bottom: 4.8rem;
+}
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    font-size: 2rem;
+    padding: 1.6rem 3.2rem;
+    text-decoration: none;
+    border-radius: 0.9rem;
+    outline: none;
+}
+
+.btn--full {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn--outline {
+    background-color: white;
+    color: #333;
+}
+
+.btn--outline:hover {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 3px white;
 }
