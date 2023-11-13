@@ -89,7 +89,7 @@ body {
 }
 
 .hero {
-    max-width: 120rem;
+    max-width: 130rem;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -230,4 +230,46 @@ body {
 
 .main-nav ul li:last-child a:hover {
     background-color: #cf711f;
+}
+
+
+/*---------------*/
+/* section1->how */
+/*---------------*/
+.section-how {
+    background-color: aqua;
+    padding: 9.6rem 0;
+}
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    height: auto;
+}
+
+.subheading {
+    color: var(--primary-color);
+    font-weight: 700;
+    line-height: 1rem;
+}
+
+.grid {
+    display: grid;
+    gap: 3.2rem;
+}
+
+.grid--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--center-v {
+    align-items: center;
 }
