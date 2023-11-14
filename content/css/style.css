@@ -79,6 +79,14 @@ body {
     color: #555;
 }
 
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.center-align {
+    text-align: center;
+}
 
 /*------*/
 /* hero */
@@ -237,25 +245,26 @@ body {
 /* section1->how */
 /*---------------*/
 .section-how {
-    background-color: aqua;
     padding: 9.6rem 0;
-}
-
-.container {
-    max-width: 120rem;
-    margin: 0 auto;
-    height: auto;
 }
 
 .subheading {
     color: var(--primary-color);
     font-weight: 700;
-    line-height: 1rem;
+    font-size: 1.6rem;
+    margin-bottom: 1.6rem;
+    display: block;
+}
+
+.main-heading {
+    font-size: 3.2rem;
+    font-weight: 900;
+    margin-bottom: 4.4rem;
 }
 
 .grid {
     display: grid;
-    gap: 3.2rem;
+    gap: 1.6rem 9.6rem;
 }
 
 .grid--2-cols {
@@ -272,4 +281,95 @@ body {
 
 .grid--center-v {
     align-items: center;
+}
+
+.section-how {
+    padding: 9.6rem 0;
+}
+
+.how-number {
+    color: #cdcdcd;
+    font-size: 7.2rem;
+    font-weight: 900;
+}
+
+.how-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.how-text {
+    font-size: 1.6rem;
+    text-align: justify;
+    line-height: normal;
+}
+
+.how-imgbox img {
+    width: 35%;
+}
+
+.how-imgbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.how-imgbox::before {
+    display: block;
+    content: "";
+    width: 60%;
+    padding-bottom: 60%;
+    background-color: var(--tint-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+}
+
+.how-imgbox::after {
+    display: block;
+    content: "";
+    width: 45%;
+    padding-bottom: 45%;
+    background-color: #fae5d3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+
+/*-----------------*/
+/* section2->meals */
+/*-----------------*/
+.meals-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 10%;
+    overflow: hidden;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    margin-bottom: 4.4rem;
+}
+
+.card-textbox {
+    padding: 1.6rem 3.2rem;
+}
+
+.meals-card img {
+    width: 100%;
+}
+
+.meals-card-tags {
+    display: flex;
+    gap: 1rem;  
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
 }
